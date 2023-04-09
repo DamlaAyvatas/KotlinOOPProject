@@ -1,13 +1,12 @@
 package com.dayvatas.kotlinoopproject
 
-class Musician(name: String, instrument: String, age: Int) {
+open class Musician(name: String, instrument: String, age: Int) {
     var name: String? = name  // encapsulation
         private set
         get
 
-    var instrument: String? = instrument
-        get
-        set
+    private var instrument: String? = instrument
+
 
     var age: Int? = age
         get

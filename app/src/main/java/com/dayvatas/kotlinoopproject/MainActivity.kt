@@ -22,5 +22,9 @@ class MainActivity : AppCompatActivity() {
         println(james.returnBandName("damla"))
         println(james.returnBandName("DDD"))
 
+        var lars = SuperMusician("Lars", "Drums", 65)
+        println(lars.name)
+        println(lars.returnBandName("damla"))
+        lars.sing()
     }
 }
