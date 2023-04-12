@@ -55,5 +55,35 @@ class MainActivity : AppCompatActivity() {
         println(myPiano.roomName)
         myPiano.info()
 
+        // lambda expressions
+        fun printString(myString: String){
+            println(myString)
+        }
+        printString("that is my string")
+
+        val testString = {myString : String -> println(myString) }
+        testString("my lambda string")
+
+        val multiplyLambda = {a: Int, b:Int -> a*b}
+        println(multiplyLambda(5,4))
+
+        val multiplyLambda2 : (Int, Int) -> Int = {a,b -> a*b}
+        println(multiplyLambda2(2,3))
+
+        //asynchronous
+        //callback function, listener function, completion function
+
+        fun downloadMusicians(url: String, completion : (Musician) -> Unit){ //completion içinde bir musician objesi alıyor
+            //url -> download
+            //data
+            val kirkHammet = Musician("kirk","guitar", 60)
+            completion(kirkHammet)
+        }
+        downloadMusicians("metallica.com",{
+            println(it.name)
+        })
+        downloadMusicians("metallica.com", {musician ->
+            println(musician.name)
+        })
     }
 }
