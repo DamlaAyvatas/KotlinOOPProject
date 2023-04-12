@@ -1,6 +1,6 @@
 package com.dayvatas.kotlinoopproject
 
-class User {
+class User : People {
     //property
     var name : String? = null
     var age : Int? = null

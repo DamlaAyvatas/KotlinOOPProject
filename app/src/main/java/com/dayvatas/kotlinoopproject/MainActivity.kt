@@ -43,5 +43,17 @@ class MainActivity : AppCompatActivity() {
         val dog = Dog()
         dog.test()
         dog.sing()
+
+        println(myUser.information())
+
+        //abstract & inheritance
+
+        //var myPeople = People()
+        var myPiano = Piano()
+        myPiano.brand = "Yamaha"
+        myPiano.digital = false
+        println(myPiano.roomName)
+        myPiano.info()
+
     }
 }
